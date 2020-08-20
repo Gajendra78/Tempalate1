@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Import Google Icon Font-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+      * {
+        font-family: "Josefin Sans", sans-serif;
+      }
+
+      section {
+        width: 90%;
+        margin: auto;
+        margin-top: 100px;
+      }
+    </style>
+
+    <title>Document</title>
+  </head>
+
+  <body>
+    <nav class="blue ligten-1">
+      <div class="nav-wrapper container">
+        <a href="#!" class="brand-logo">Fukset</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"
+          ><i class="material-icons">menu</i></a
+        >
+        <ul class="right hide-on-med-and-down">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Services.html">Services</a></li>
+          <li><a href="Gallery.html">Gallery</a></li>
+          <li><a href="About.html">About</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="Services.html">Services</a></li>
+      <li><a href="Gallery.html">Gallery</a></li>
+      <li><a href="About.html">About</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+    </ul>
+
+    <!--Floting button hover  -->
+
+    <div class="fixed-action-btn">
+      <a class="btn-floating btn-large red">
+        <i class="large material-icons">mode_edit</i>
+      </a>
+      <ul>
+        <li>
+          <a class="btn-floating blue darken-2"
+            ><i class="material-icons">facebook</i></a
+          >
+        </li>
+        <li>
+          <a class="btn-floating yellow darken-1"
+            ><i class="material-icons">chat</i></a
+          >
+        </li>
+        <li>
+          <a class="btn-floating red"><i class="material-icons">room</i></a>
+        </li>
+        <li>
+          <a class="btn-floating black"><i class="material-icons">share</i></a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Contact us -->
+
+    <section>
+      <h2 class="center-align blue-text">Contact Us</h2>
+      <div class="row">
+        <div class="col s6 offset-s3">
+          <hr />
+        </div>
+      </div>
+
+      <div class="row">
+        <form class="col m6 l6 s10 offset-l3">
+          <div class="row">
+            <div class="input-field col s6">
+              <i class="material-icons prefix">account_circle</i>
+              <input id="icon_prefix" type="text" class="validate" />
+              <label for="icon_prefix">First Name</label>
+            </div>
+            <div class="input-field col s6">
+              <i class="material-icons prefix">account_circle</i>
+              <input id="icon_telephone" type="tel" class="validate" />
+              <label for="icon_telephone">last Name</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix">mail</i>
+              <input id="email" type="email" class="validate" />
+              <label for="email">Email</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix">phone</i>
+              <input id="phone" type="text" class="validate" data-length="10" />
+              <label for="phone">Mobile no</label>
+            </div>
+          </div>
+          <div class="row">
+            <form class="col s12">
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">mode_edit</i>
+                  <textarea
+                    id="icon_prefix2"
+                    class="materialize-textarea"
+                  ></textarea>
+                  <label for="icon_prefix2">leave a Message</label>
+                </div>
+              </div>
+              <a
+                class="btn waves-effect waves-light blue"
+                type="submit"
+                name="action"
+                onclick="M.toast({html: 'Form has been subimitted'})"
+                >Submit
+                <i class="material-icons right">send</i>
+              </a>
+            </form>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <script>
+      $(document).ready(function () {
+        $(".sidenav").sidenav();
+        $(".carousel.carousel-slider").carousel({
+          fullWidth: true,
+          indicators: true,
+          duration: 0.3,
+        });
+        $(".fixed-action-btn").floatingActionButton();
+        $(".materialboxed").materialbox();
+        $("input#phone").characterCounter();
+      });
+    </script>
+    <!-- Compiled and minified JavaScript -->
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  </body>
+</html>
